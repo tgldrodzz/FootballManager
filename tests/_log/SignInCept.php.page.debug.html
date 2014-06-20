@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Manager | Welcome</title>
+
+    <!-- CSS -->
+    <link media="all" type="text/css" rel="stylesheet" href="http://localhost/static/css/foundation.css">
+    <link media="all" type="text/css" rel="stylesheet" href="http://localhost/static/css/styles.css">
+
+    <!-- JS -->
+    <script src="http://localhost/static/js/vendor/modernizr.js"></script>
+
+  </head>
+  <body>
+
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">Football Manager</a></h1>
+      </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class=""><a href="#">Right Button</a></li>
+        <li class=""><a href="#">Right Button</a></li>
+        <li class=""><a href="#">Right Button</a></li>
+      </ul>
+
+      <!-- Left Nav Section
+      <ul class="left">
+        <li><a href="#">Left Nav Button</a></li>
+      </ul>-->
+    </section>
+  </nav>
+
+      <div class="row">
+        <form method="POST" action="http://localhost/register" accept-charset="UTF-8" id="signUp"><input name="_token" type="hidden" value="Z8nBOMWYEz9IwiGmC4SouvDnfMBC9SWIAh65HAg5">                                    <label for="registerUsername"></label>
+            <input type="text" class="register_username" id="registerUsername" name="username" placeholder="Username">
+            <input type="email" class="" id="" name="email" placeholder="Email Address">
+            <input type="password" class="" id="" name="password" placeholder="">
+            <input type="password" class="" id="" name="confirm_password" placeholder="">
+
+            <input type="submit" class="" id="" name="register" value="Register">
+        </form>    </div>
+
+
+    <script src="http://localhost/static/js/vendor/jquery.js"></script>
+    <script src="http://localhost/static/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

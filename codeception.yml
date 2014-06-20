@@ -12,7 +12,7 @@ settings:
 modules:
     config:
         Db:
-            dsn: 'footballManager'
+            dsn: 'mysql:host=localhost;dbname=footballmanager'
             user: 'root'
             password: 'roadmin'
             dump: tests/_data/dump.sql

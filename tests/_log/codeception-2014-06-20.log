@@ -1,0 +1,4 @@
+[2014-06-20 17:44:57] Codeception.ALERT: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'forge' [] []
+[2014-06-20 17:44:57] Codeception.INFO: # ERROR # [] []
+[2014-06-20 17:47:09] Codeception.ALERT: SQLSTATE[HY000] [1044] Access denied for user ''@'localhost' to database 'forge' [] []
+[2014-06-20 17:47:09] Codeception.INFO: # ERROR # [] []
