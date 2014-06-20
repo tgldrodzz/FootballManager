@@ -122,6 +122,11 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+        /* THIRD PARTY SERVICES */
+        'Laracasts\Validation\ValidationServiceProvider',
+        'Way\Generators\GeneratorsServiceProvider',
+        'Clockwork\Support\Laravel\ClockworkServiceProvider',
+
 	),
 
 	/*
