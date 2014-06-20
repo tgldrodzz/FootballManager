@@ -126,6 +126,10 @@ return array(
         'Laracasts\Validation\ValidationServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Clockwork\Support\Laravel\ClockworkServiceProvider',
+
+        /* HOME MADE SERVICES */
+        'TGLD\Providers\FacadeServiceProvider',
+        'TGLD\Providers\RepositoryServiceProvider',
 	),
 
 	/*
@@ -192,7 +196,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
+        'Member'          => 'TGLD\Facades\Member',
 	),
 
 );

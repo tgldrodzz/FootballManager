@@ -48,22 +48,21 @@ class AccountController extends \BaseController {
 	 */
 	public function store()
 	{
-        $inputs = Input::only('username', 'email', 'password', 'confirm_password');
+        $input = Input::only('username', 'email', 'password', 'confirm_password');
 
         try
         {
-            $this->registerForm->validate($inputs);
+            $this->registerForm->validate($input);
 
-            return Redirect::to('login')->with('register_message', 'Welcome Thanks for registering, log in below');
+            Member::create($input);
+            return Redirect::back()->with('register_success', 'Thank you for signing up');
         }
         catch(FormValidationException $e)
         {
             return Redirect::back()->withInput()->withErrors($e->getErrors());
         }
 
-        Member::create($inputs);
 
-        return Redirect::back()->with('register_success', 'Thank you for signing up');
 	}
 
 	/**
