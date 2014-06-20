@@ -126,6 +126,7 @@ return array(
         'Laracasts\Validation\ValidationServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Clockwork\Support\Laravel\ClockworkServiceProvider',
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 
 	),
 
