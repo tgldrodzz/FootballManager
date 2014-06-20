@@ -7,7 +7,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'FootballManager',
+			'database'  => 'footballManager',
 			'username'  => 'root',
 			'password'  => 'roadmin',
 			'charset'   => 'utf8',
