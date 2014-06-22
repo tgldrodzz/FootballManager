@@ -15,5 +15,12 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+# ACCOUNT ROUTES
 Route::get('/register', ['as' => 'register', 'uses' => 'AccountController@create']);
 Route::post('/register', ['as' => 'register', 'uses' => 'AccountController@store']);
+
+
+#LOGIN ROUTESR
+Route::get('/login', ['as' => 'login', 'uses' => 'SessionsController@create']);
+Route::post('/login', ['as' => 'login', 'uses' => 'SessionsController@store']);
