@@ -18,6 +18,6 @@ class EloquentMemberRepository implements MemberRepositoryInterface
 
     public function getAllUserData($username)
     {
-        return User::where('username', '=', $username)->first();
+        return User::with('team')->where('username', '=', $username)->first();
     }
 } 

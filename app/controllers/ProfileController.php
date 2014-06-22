@@ -45,8 +45,9 @@ class ProfileController extends \BaseController {
 	public function show($username)
 	{
 		$user = Member::getAllData($username);
+        $arena = Teams::getArenaData($user);
 
-        return View::make('profile.show', compact('user'));
+        return View::make('profile.show', compact('user','arena'));
 	}
 
 	/**

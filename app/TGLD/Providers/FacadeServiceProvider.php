@@ -20,5 +20,10 @@ class FacadeServiceProvider extends ServiceProvider{
             'Member',
             'TGLD\FacadeServices\Member\MemberService'
         );
+
+        $this->app->bind(
+            'Teams',
+            'TGLD\FacadeServices\Team\TeamService'
+        );
     }
 }

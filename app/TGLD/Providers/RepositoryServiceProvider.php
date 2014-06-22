@@ -20,5 +20,10 @@ class RepositoryServiceProvider extends ServiceProvider{
             'TGLD\Repositories\Member\MemberRepositoryInterface',
             'TGLD\Repositories\Member\EloquentMemberRepository'
         );
+
+        $this->app->bind(
+            'TGLD\Repositories\Team\TeamRepositoryInterface',
+            'TGLD\Repositories\Team\EloquentTeamRepository'
+        );
     }
 }
