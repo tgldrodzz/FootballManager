@@ -27,9 +27,12 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li class=""><a href="#">Right Button</a></li>
-        <li class=""><a href="#">Right Button</a></li>
-        <li class=""><a href="#">Right Button</a></li>
+        @if(!Auth::check())
+            <li class=""><a href="{{ URL::route('login') }}">Login</a></li>
+            <li class=""><a href="{{ URL::route('register') }}">Register</a></li>
+        @else
+            <li class=""><a href="{{ URL::route('logout') }}">Logout</a></li>
+        @endif
       </ul>
 
       <!-- Left Nav Section

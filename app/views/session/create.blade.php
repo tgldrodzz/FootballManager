@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        {{ Form::open(['url' => URL::route('login'), 'id' => 'signUp']) }}
+        {{ Form::open(['url' => URL::route('login'), 'id' => 'login']) }}
             @foreach($errors->all() as $error)
             	<li>{{ $error }}</li>
             @endforeach

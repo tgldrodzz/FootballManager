@@ -15,4 +15,9 @@ class EloquentMemberRepository implements MemberRepositoryInterface
     {
         return User::create($input);
     }
+
+    public function getAllUserData($username)
+    {
+        return User::where('username', '=', $username)->first();
+    }
 } 

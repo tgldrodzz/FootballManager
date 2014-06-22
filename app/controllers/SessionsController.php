@@ -108,9 +108,11 @@ public function __construct(\TGLD\Forms\Login $loginForm)
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy()
 	{
-		//
+		Auth::logout();
+
+        return Redirect::route('login');
 	}
 
 }

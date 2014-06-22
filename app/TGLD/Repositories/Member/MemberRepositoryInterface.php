@@ -12,4 +12,6 @@ namespace TGLD\Repositories\Member;
 interface MemberRepositoryInterface
 {
     public function createUser($input);
+
+    public function getAllUserData($username);
 } 

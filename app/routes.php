@@ -21,6 +21,13 @@ Route::get('/register', ['as' => 'register', 'uses' => 'AccountController@create
 Route::post('/register', ['as' => 'register', 'uses' => 'AccountController@store']);
 
 
-#LOGIN ROUTESR
+#SESSION ROUTES
 Route::get('/login', ['as' => 'login', 'uses' => 'SessionsController@create']);
 Route::post('/login', ['as' => 'login', 'uses' => 'SessionsController@store']);
+Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionsController@destroy']);
+
+# PROFILE
+Route::get('{username}', ['as' => 'profile', 'uses' => 'ProfileController@show']);
+
+
+

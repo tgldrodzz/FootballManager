@@ -28,4 +28,9 @@ class MemberService
     {
         return $this->memberRepo->createUser($input);
     }
+
+    public function getAllData($username)
+    {
+      return  $this->memberRepo->getAllUserData($username);
+    }
 } 
