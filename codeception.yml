@@ -17,4 +17,4 @@ modules:
             password: 'roadmin'
             dump: tests/_data/dump.sql
             populate: false
-            cleanup: true
+            cleanup: false
