@@ -6,19 +6,17 @@
  * Time: 11:51 AM
  */
 
-namespace TGLD\Repositories\Member;
+namespace TGLD\Repositories\Club;
 
 /**
  * Interface MemberRepositoryInterface
  * @package TGLD\Repositories\Member
  */
-interface MemberRepositoryInterface
+interface ClubRepositoryInterface
 {
     /**
-     * @param $username
+     * @param $arena_id
      * @return mixed
      */
-    public function byUsername($username);
-
-    public function byUsernameWithTeam($username);
+    public function byId($arena_id);
 } 

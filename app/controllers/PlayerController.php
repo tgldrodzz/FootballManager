@@ -1,23 +1,23 @@
 <?php
 
-use \Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
-
-class ProfileController extends \BaseController {
+class PlayerController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 * GET /profile
+	 * GET /player
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index($username)
 	{
-		//
+        $user_id = Member::getUserId($username);
+        $players = Teams::getAllPlayers($user_id);
+		return View::make('player.index', compact('players'));
 	}
 
 	/**
 	 * Show the form for creating a new resource.
-	 * GET /profile/create
+	 * GET /player/create
 	 *
 	 * @return Response
 	 */
@@ -28,7 +28,7 @@ class ProfileController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
-	 * POST /profile
+	 * POST /player
 	 *
 	 * @return Response
 	 */
@@ -37,28 +37,21 @@ class ProfileController extends \BaseController {
 		//
 	}
 
-    /**
-     * @param $username
-     * @return \Illuminate\View\View
-     */
-    public function show($username)
+	/**
+	 * Display the specified resource.
+	 * GET /player/{id}
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function show($id)
 	{
-        try
-        {
-            $user = Member::getAllByUsername($username);
-            $arena = Club::getArenaByUser($user);
-
-            return View::make('profile.show', compact('user','arena'));
-        }
-        catch(UsernameNotFoundException $e)
-        {
-            dd('username not found');
-        }
+		//
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
-	 * GET /profile/{id}/edit
+	 * GET /player/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -70,7 +63,7 @@ class ProfileController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /profile/{id}
+	 * PUT /player/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -82,7 +75,7 @@ class ProfileController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /profile/{id}
+	 * DELETE /player/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response

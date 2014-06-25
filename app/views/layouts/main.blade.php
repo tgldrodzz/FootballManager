@@ -27,7 +27,7 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        @if(!Auth::check())
+        @if(!isset($user))
             <li class=""><a href="{{ URL::route('login') }}">Login</a></li>
             <li class=""><a href="{{ URL::route('register') }}">Register</a></li>
         @else

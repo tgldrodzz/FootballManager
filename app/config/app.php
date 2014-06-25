@@ -196,8 +196,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-        'Member'          => 'TGLD\Facades\Member',
-        'Teams'            => 'TGLD\Facades\Team',
+        'Member'          => 'TGLD\Member\Member',
+        'Club'            => 'TGLD\Club\Club',
 	),
 
 );

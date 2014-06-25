@@ -1,29 +1,28 @@
-<?php
-namespace TGLD\Providers;
+<?php namespace TGLD\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-/**
- * Class FacadeServiceProvider
- * @package TGLD\Providers
- */
-class RepositoryServiceProvider extends ServiceProvider{
+class RepositoryServiceProvider extends ServiceProvider {
 
     /**
-     * Register the service provider
-     *
-     * @return void
+     * Register bindings with IoC container
      */
     public function register()
     {
+        /**
+         * Binding for Member Interface
+         */
         $this->app->bind(
             'TGLD\Repositories\Member\MemberRepositoryInterface',
             'TGLD\Repositories\Member\EloquentMemberRepository'
         );
 
+        /**
+         * Binding for Club Interface
+         */
         $this->app->bind(
-            'TGLD\Repositories\Team\TeamRepositoryInterface',
-            'TGLD\Repositories\Team\EloquentTeamRepository'
+            'TGLD\Repositories\Club\ClubRepositoryInterface',
+            'TGLD\Repositories\Club\EloquentClubRepository'
         );
     }
 }

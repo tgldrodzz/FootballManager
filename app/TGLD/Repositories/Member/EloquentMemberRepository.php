@@ -1,22 +1,27 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Rodrigo
- * Date: 6/20/2014
- * Time: 5:09 PM
- */
+<?php   namespace TGLD\Repositories\Member;
 
-namespace TGLD\Repositories\Member;
 use User;
 
+/**
+ * Class EloquentMemberRepository
+ * @package TGLD\Repositories\Member
+ */
 class EloquentMemberRepository implements MemberRepositoryInterface
 {
-    public function createUser($input)
+    /**
+     * @param $username
+     * @return \Illuminate\Database\Eloquent\Model|null|static
+     */
+    public function byUsername($username)
     {
-        return User::create($input);
+        return User::where('username', '=', $username)->first();
     }
 
-    public function getAllUserData($username)
+    /**
+     * @param $username
+     * @return \Illuminate\Database\Eloquent\Model|null|static
+     */
+    public function byUsernameWithTeam($username)
     {
         return User::with('team')->where('username', '=', $username)->first();
     }

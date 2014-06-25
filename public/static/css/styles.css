@@ -1,3 +1,32 @@
+/******************************************************************/
+/* OVERALL */
+/******************************************************************/
+
 .center{text-align: center;}
 .left{float: left;}
 .right{float: right;}
+ul{list-style-type: none}
+
+/******************************************************************/
+/* MAIN CONTENT */
+/******************************************************************/
+#sidebar{
+    width: 15%;
+    float: left;
+    background: #ccc;
+    height: 1080px;
+    padding: 15px;
+}
+#bodyContent{
+    width: 85%;
+    float: left;
+}
+
+/******************************************************************/
+/* PROFILE PAGE */
+/******************************************************************/
+#memberProfileInfo{
+    border-bottom: solid 3px #333;
+    padding-bottom: 20px;
+    margin-top: 2%;
+}
