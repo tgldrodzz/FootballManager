@@ -42,7 +42,11 @@
     </section>
   </nav>
 
-  @yield('content')
+   @yield('sidebar')
+
+  <div id="bodyContent">
+    @yield('content')
+  </div>
 
 
     {{ HTML::script('static/js/vendor/jquery.js') }}

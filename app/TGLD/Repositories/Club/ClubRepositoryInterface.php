@@ -16,7 +16,15 @@ interface ClubRepositoryInterface
 {
     /**
      * @param $arena_id
+     * @param $model
      * @return mixed
      */
-    public function byId($arena_id);
+    public function byId($arena_id, $model);
+
+    /**
+     * @param $user_id
+     * @param $model
+     * @return mixed
+     */
+    public function byUserId($user_id, $model);
 } 

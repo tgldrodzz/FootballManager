@@ -46,4 +46,18 @@ class MemberService
 
         return $user;
     }
+
+    public function getUserIdByUsername($username)
+    {
+        $user = $this->member->byUsername($username);
+
+        if(! $user)
+        {
+            throw new UsernameNotFoundException;
+        }
+
+        $user_id = $user->id;
+
+        return $user_id;
+    }
 } 

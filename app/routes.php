@@ -26,8 +26,8 @@ Route::get('/login', ['as' => 'login', 'uses' => 'SessionsController@create']);
 Route::post('/login', ['as' => 'login', 'uses' => 'SessionsController@store']);
 Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionsController@destroy']);
 
-# PLAYER
-Route::get('{username}/players', ['as' => 'players', 'uses' => 'PlayerController@index']);
+# TEAM MANAGEMENT
+Route::get('{username}/team-management', ['as' => 'teamManagement', 'uses' => 'TeamManagementController@index']);
 
 # PROFILE
 Route::get('{username}', ['as' => 'profile', 'uses' => 'ProfileController@show']);

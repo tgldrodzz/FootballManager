@@ -29,7 +29,11 @@ class ClubService
     {
         $arena_id = $user->team->team_arena;
 
-        return $this->club->byId($arena_id);
+        return $this->club->byId($arena_id, 'Arena');
+    }
 
+    public function getAllPlayersByUserId($user_id)
+    {
+        return $this->club->byUserId($user_id, 'Player');
     }
 } 

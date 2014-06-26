@@ -15,7 +15,7 @@ ul{list-style-type: none}
     float: left;
     background: #ccc;
     height: 1080px;
-    padding: 15px;
+    padding: 55px 15px 15px 15px;
 }
 #bodyContent{
     width: 85%;
@@ -29,4 +29,11 @@ ul{list-style-type: none}
     border-bottom: solid 3px #333;
     padding-bottom: 20px;
     margin-top: 2%;
+}
+
+/******************************************************************/
+/* TEAM MANAGEMENT */
+/******************************************************************/
+.players-table{
+    width: 100%;
 }
