@@ -28,6 +28,7 @@ Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionsController@destroy']
 
 # TEAM MANAGEMENT
 Route::get('{username}/team-management', ['as' => 'teamManagement', 'uses' => 'TeamManagementController@index']);
+Route::get('{username}/standing', ['as' => 'standing', 'uses' => 'TeamManagementController@getStanding']);
 
 # PROFILE
 Route::get('{username}', ['as' => 'profile', 'uses' => 'ProfileController@show']);

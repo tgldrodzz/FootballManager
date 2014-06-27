@@ -44,4 +44,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         return $this->hasOne('Team');
     }
+
+    public function season()
+    {
+        return  $this->belongsToMany('Season');
+    }
+
+    public function seasonStanding()
+    {
+        return  $this->hasMany('SeasonStanding');
+    }
 }
